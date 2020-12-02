@@ -1,13 +1,13 @@
 @import "bootstrap.css";
 
-$primary-color: #171D96;
+$primary-color: black;
 $hover-color: lighten($primary-color, 40%);
-$body-font: 'Montserrat', 'Helvetica', sans-serif;
-$title-font: 'Montserrat Alternates', 'Helvetica', sans-serif;
+$body-font: 'Ubuntu', 'Helvetica', sans-serif;
+$title-font: 'Josefin Sans', 'Helvetica', sans-serif;
 
 body {
   font-family: $body-font;
-  color: $primary-color;
+  color: black;
 }
 
 @media (max-width: 575px) {
@@ -20,11 +20,6 @@ body {
   h3 {
     font-size: 1.5rem;
   }
-}
-
-.justify-content-center {
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
 }
 
 input, textarea {
@@ -96,21 +91,14 @@ button:hover, input[type="submit"]:hover {
 #home-logo {
   position: relative;
   display: block;
-  margin: calc(8rem + 3vw) auto calc(3rem);
-  height: calc(80px + 3vw);
+  margin: calc(8rem + 3vw) auto calc(5rem + 2vw);
+  height: calc(12rem + 7vw);
 }
 
 #home-title {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: calc(1.8rem + 3vw);
-  font-weight: 400;
-}
-
-#home-tagline {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-  font-size: calc(1.75rem + 1vw);
-  font-weight: 700;
+  font-family: $title-font;
+  font-size: calc(3rem + 3vw);
+  font-weight: 600;
 }
 
 .home-section .row {
@@ -118,45 +106,17 @@ button:hover, input[type="submit"]:hover {
   margin: auto;
 }
 
-.home-section.white {
+.home-section {
   min-height: 100vh;
   overflow: auto;
-}
-
-.home-section.white a {
-  color: $primary-color;
 }
 
 .home-section.inverse {
-  min-height: 100vh;
-  overflow: auto;
   color: white;
 }
 
-#home-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/student.jpg) center center no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.home-section.white > .row {
-  margin-top: calc(4rem + 3vw);
-}
-
-#home-3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/student2.jpg) center center no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-@media screen and (max-width: 575px) {
-  #home-1, #home-3 {
-    background-attachment: scroll;
-  }
-}
-
-#home-3 > .row {
-  margin-top: calc(1rem + 5vw);
+.home-section a {
+  color: $primary-color;
 }
 
 .home-section.inverse a {
@@ -186,23 +146,4 @@ button:hover, input[type="submit"]:hover {
 
 .home-next a:hover h2 {
   font-weight: 600;
-}
-
-.usp {
-  margin-top: calc(2rem + 3vw);
-}
-
-.usp-icon {
-  width: 7rem;
-  height: 7rem;
-  fill: #7ac534;
-  margin-bottom: 2rem;
-}
-
-.usp-title {
-  margin-bottom: 1.5rem;
-}
-
-.usp-text {
-  color: #888;
 }
