@@ -24,7 +24,7 @@ def index():
         db.session.add(user)
         db.session.commit()
         send_inquiry_email(user, subject, message)
-        flash("Thank you for your message. We will be in touch!")
+        flash("Welcome! We will be in touch.")
         print(app.config['ADMINS'])
         return redirect(url_for('index'))
     return render_template('index.html', form=form)
