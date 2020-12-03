@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
-{% block styles %}
-  {{ super() }}
-{% endblock styles %}
-
 {% block content %}
   <div id="home-1" class="home-section text-center">
     <div class="row justify-content-center">
@@ -12,74 +8,113 @@
         <img id="home-logo" class="img-fluid"
           src="{{ url_for('.static', filename='img/and_logo_black.svg') }}" alt="">
         <h1 id="home-title">A NEW DEMOCRACY</h1>
-        <!--<div class="home-next">
-          <a href="#home-2">
-            <h2>
-
-            </h2>
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi
-                bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </a>
-        </div>-->
+        <a href="#home-2" class="home-next">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi
+              bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
 
-  <!--<div id="home-2" class="home-section">
+  <div id="home-2" class="home-section">
     <div class="row text-center justify-content-center">
       <div class="col-10">
         <div class="row justify-content-center">
-
+          <img class="home-img img-fluid"
+            src="{{ url_for('.static', filename='img/new_model.png') }}" alt="">
         </div>
-        <div class="home-next">
-          <a href="#home-3">
-            <h2>
-              See if we are right for you
-            </h2>
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi
-                bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </a>
-        </div>
+        <a href="#home-3" class="home-next">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi
+              bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
 
-  <div id="home-3" class="home-section inverse">
+  <div id="home-3" class="home-section">
     <div class="row justify-content-center">
       <div class="col-sm-10 col-lg-8">
-
-        <div class="home-next">
-          <a href="#home-4">
-            <h2>
-
-            </h2>
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </a>
-        </div>
+        <h1 class="home-header">MISSION</h1>
+        <p id="mission-text">
+          To transcend the left-right political paradigm and build
+          a new model of democracy in the United States.
+        </p>
+        <a href="#home-4" id="mission-next" class="home-next">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
 
   <div id="home-4" class="home-section">
+    <div class="row text-center justify-content-center">
+      <div class="col-sm-10 col-lg-8">
+        <img class="home-img img-fluid"
+          src="{{ url_for('.static', filename='img/compassion_growth.png') }}" alt="">
+        <a class="btn mb-4" href="https://www.instagram.com/anewdemocracy" target="_blank">
+          See more on Instagram
+        </a>
+        <a href="#home-5" class="home-next">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="home-5" class="home-section">
+    <div class="row justify-content-center">
+      <div class="col-sm-10 col-lg-8">
+        <h1 class="home-header">WHERE TO START</h1>
+        <ul class="mb-5">
+          <li class="home-text">
+            Establish democratic decision-making processes
+          </li>
+          <li class="home-text">
+            Host cooperative debates amongst people with divergent perspectives
+            to uncover unifying principles
+          </li>
+          <li class="home-text">
+            Grow organic, scalable community to grow collective power
+          </li>
+        </ul>
+        <a href="#home-6" class="home-next">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="home-6" class="home-section">
     <div class="row justify-content-center">
       <div class="col-11 col-md-8">
-        <h1 class="home-header">Send us a message</h1>
+        <h1 class="mb-4">LET'S BUILD A NEW DEMOCRACY</h1>
         <form action="" method="post">
           {{ form.hidden_tag() }}
           <p class="mb-4">{{ form.first_name }}</p>
           <p class="mb-4">{{ form.email }}</p>
-          <p class="mb-4">{{ form.subject }}</p>
           <p class="mb-4">{{ form.message(rows='3') }}</p>
-          {{ form.submit }}
+          {{ form.submit(class="btn black") }}
         </form>
       </div>
     </div>
-  </div>-->
+  </div>
 {% endblock content %}
+
+{% block scripts %}
+  {{ super() }}
+  <script type="text/javascript"
+          src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+{% endblock scripts %}

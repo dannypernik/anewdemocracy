@@ -9,9 +9,8 @@ class InquiryForm(FlaskForm):
     email = StringField('Email address', render_kw={"placeholder": "Email address"}, \
         validators=[InputRequired(), Email(message="Please enter a valid email address")])
     subject = StringField('Subject (optional)', render_kw={"placeholder": "Subject (optional)"})
-    message = TextAreaField('Message', render_kw={"placeholder": "Message"}, \
-        validators=[InputRequired()])
-    submit = SubmitField('Submit')
+    message = TextAreaField('Message (optional)', render_kw={"placeholder": "Message (optional)"})
+    submit = SubmitField('JOIN THE MOVEMENT')
 
 
 class EmailForm(FlaskForm):

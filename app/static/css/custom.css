@@ -4,27 +4,35 @@ body {
   color: black;
 }
 
-@media (max-width: 575px) {
-  h1 {
-    font-size: 2.125rem;
-  }
-
-  h2 {
-    font-size: 1.625rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", "Helvetica", sans-serif;
 }
+
+h1 {
+  font-size: 3rem;
+}
+
 input, textarea {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.5rem;
   padding: 1rem;
   border: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #aaa;
   width: 100%;
   outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+}
+
+::placeholder {
+  color: #999;
+  font-weight: 300;
 }
 
 input:focus, textarea:focus {
@@ -40,26 +48,38 @@ input[type=submit] {
   transition: 0.3s;
 }
 
-button {
+a {
+  display: table;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #999999;
+}
+
+.btn {
+  font-size: 1.5rem;
   background-color: transparent;
   border: 2px solid black;
   padding: 10px;
   transition: 0.3s;
 }
 
-button.lg {
-  font-size: calc(125% + 1vw);
+.btn:hover, input[type=submit]:hover {
+  background-color: black;
+  color: white;
 }
 
-.inverse button {
+.btn.black {
+  background-color: black;
   color: white;
-  border-color: white;
 }
 
-button:hover, input[type=submit]:hover {
-  background-color: #666666;
-  border-color: #666666;
-  color: white;
+.btn.black:hover {
+  background-color: white;
+  color: black;
 }
 
 .navbar {
@@ -86,7 +106,7 @@ button:hover, input[type=submit]:hover {
 #home-logo {
   position: relative;
   display: block;
-  margin: calc(8rem + 3vw) auto calc(5rem + 2vw);
+  margin: 0 auto calc(5rem + 2vw);
   height: calc(12rem + 7vw);
 }
 
@@ -94,6 +114,15 @@ button:hover, input[type=submit]:hover {
   font-family: "Josefin Sans", "Helvetica", sans-serif;
   font-size: calc(3rem + 3vw);
   font-weight: 600;
+  margin-bottom: calc(5rem + 2vw);
+}
+
+#mission-text {
+  font-size: calc(2.75rem + 1vw);
+}
+
+#mission-next {
+  margin-top: calc(5rem + 3vw);
 }
 
 .home-section .row {
@@ -102,45 +131,46 @@ button:hover, input[type=submit]:hover {
 }
 
 .home-section {
+  display: flex;
+  align-items: center;
   min-height: 100vh;
   overflow: auto;
+  padding: 5rem 0;
 }
 
+/*
 .home-section.inverse {
   color: white;
-}
-
-.home-section a {
-  color: black;
 }
 
 .home-section.inverse a {
   color: white;
 }
 
+.inverse .btn {
+  color: white;
+  border-color: white;
+}
+*/
+.home-img {
+  display: block;
+  height: 68vh;
+  min-height: 450px;
+  margin: 0 auto calc(1rem + 2vw);
+}
+
 .home-header {
-  font-family: "Josefin Sans", "Helvetica", sans-serif;
-  font-size: calc(1.75rem + 2vw);
+  font-size: calc(2.5rem + 3vw);
   margin-bottom: 2rem;
 }
 
-.home-section button {
-  display: block;
-  margin: calc(3rem + 2vw) auto 0;
-}
-
 .home-next {
-  display: table;
-  margin: calc(2rem + 3vw) auto 3rem;
-  text-align: center;
+  margin: auto;
 }
 
-.home-next a {
-  text-decoration: none;
-}
-
-.home-next a:hover h2 {
-  font-weight: 600;
+.home-text {
+  font-size: calc(2.25rem + 1vw);
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=custom.css.map */
